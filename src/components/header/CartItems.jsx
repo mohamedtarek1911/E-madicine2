@@ -12,13 +12,17 @@ export const CartItems = ({ id, cover, name, price, quantity, totalPrice }) => {
   const descCartitems = () => {
     dispatch(cartActions.removeFromCart(id));
   };
+
+  const deleteFromCart = () => {
+    dispatch(cartActions.deleteFromCart(id));
+  };
   return (
     <>
       <div className="cardList" key={id}>
         <div className="cartContent">
           <div className="img">
             <img src={cover} alt="" />
-            <button className="remove flexCenter">
+            <button onClick={deleteFromCart} className="remove flexCenter">
               <AiOutlineClose />
             </button>
           </div>

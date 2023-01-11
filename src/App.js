@@ -14,13 +14,13 @@ const App = () => {
   console.log(cartItems);
   return (
     <>
-      (
       <Router>
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/regsiter" component={Regsiter} />
           <Route exact path="/account" component={Account} />
+          <Route exact path="*" component={Home} />
         </Switch>
         <Footer />
       </Router>

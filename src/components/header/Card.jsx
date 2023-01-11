@@ -17,15 +17,21 @@ export const Card = () => {
   //total
   let total = 0;
   const itemsLists = useSelector((state) => state.cart.itemsList);
+  console.log(itemsLists);
   itemsLists.forEach((item) => {
     total += item.totalPrice;
   });
+
+  let count = itemsLists.reduce((acc, product) => {
+    acc += product.quantity;
+    return acc;
+  }, 0);
 
   return (
     <>
       <div className="card" onClick={() => setCardOpen(!cardOpen)}>
         <BiShoppingBag className="cardIcon" />
-        <span className="flexCenter">{quantity}</span>
+        <span className="flexCenter">{count}</span>
       </div>
       <div className={cardOpen ? "overlay" : "nonoverlay"}></div>
 
