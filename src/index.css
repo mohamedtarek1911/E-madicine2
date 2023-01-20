@@ -111,6 +111,76 @@ footer .icon {
 @media screen and (max-width: 768px) {
   .grid3,
   .grid {
+    grid-template-columns: repeat(1, 1fr);
+    transition: all 0.4s;
+  }
+  .boxs img {
+    max-height: 80px;
+    width: 100%;
+    transition: all 0.4s;
+
+    /* padding: 50px; */
+  }
+  .category .box {
+    min-height: 130px;
+    padding: 0px;
+    transition: all 0.4s;
+  }
+
+  .text {
+    /* background-color: aqua; */
+    min-height: 80px;
+    transition: all 0.4s;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .boxs img {
+    max-height: 80px;
+    width: 100%;
+    transition: all 0.4s;
+  }
+  .category .box {
+    min-height: 130px;
+    padding: 0px;
+    transition: all 0.4s;
+  }
+  .grid3,
+  .grid {
     grid-template-columns: repeat(2, 1fr);
+    transition: all 0.4s;
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .boxs img {
+    max-height: 80px;
+    width: 100%;
+    transition: all 0.4s;
+
+    /* padding: 50px; */
+  }
+  .category .box {
+    min-height: 130px;
+    padding: 0px;
+    transition: all 0.4s;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid3,
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    transition: all 0.4s;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .grid3,
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    transition: all 0.4s;
   }
 }
